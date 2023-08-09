@@ -293,7 +293,7 @@ The seven phases are as follows:
    Before starting repairs, the summary counters are checked and any necessary
    repairs are performed so that subsequent repairs will not fail the resource
    reservation step due to wildly incorrect summary counters.
-   Unsuccesful repairs are requeued as long as forward progress on repairs is
+   Unsuccessful repairs are requeued as long as forward progress on repairs is
    made somewhere in the filesystem.
    Free space in the filesystem is trimmed at the end of phase 4 if the
    filesystem is clean.
@@ -605,7 +605,7 @@ functionality.
   The cron job does not have this protection.
 
 - **Fuzz Kiddiez**: There are many people now who seem to think that running
-  automated fuzz testing of ondisk artifacts to find mischevious behavior and
+  automated fuzz testing of ondisk artifacts to find mischievous behavior and
   spraying exploit code onto the public mailing list for instant zero-day
   disclosure is somehow of some social benefit.
   In the view of this author, the benefit is realized only when the fuzz
@@ -1351,7 +1351,7 @@ If the leaf information exceeds a single filesystem block, a dabtree (also
 rooted at block 0) is created to map hashes of the attribute names to leaf
 blocks in the attr fork.
 
-Checking an extended attribute structure is not so straightfoward due to the
+Checking an extended attribute structure is not so straightforward due to the
 lack of separation between attr blocks and index blocks.
 Scrub must read each block mapped by the attr fork and ignore the non-leaf
 blocks:
@@ -1401,7 +1401,7 @@ If the free space has been separated and the second partition grows again
 beyond one block, then a dabtree is used to map hashes of dirent names to
 directory data blocks.
 
-Checking a directory is pretty straightfoward:
+Checking a directory is pretty straightforward:
 
 1. Walk the dabtree in the second partition (if present) to ensure that there
    are no irregularities in the blocks or dabtree mappings that do not point to
@@ -2566,8 +2566,8 @@ old metadata blocks:
 The transaction rolling in steps 2c and 3 represent a weakness in the repair
 algorithm, because a log flush and a crash before the end of the reap step can
 result in space leaking.
-Online repair functions minimize the chances of this occuring by using very
-large transactions, which each can accomodate many thousands of block freeing
+Online repair functions minimize the chances of this occurring by using very
+large transactions, which each can accommodate many thousands of block freeing
 instructions.
 Repair moves on to reaping the old blocks, which will be presented in a
 subsequent :ref:`section<reaping>` after a few case studies of bulk loading.
@@ -5090,7 +5090,7 @@ This scan after validation of all filesystem metadata (except for the summary
 counters) as phase 6.
 The scan starts by calling ``FS_IOC_GETFSMAP`` to scan the filesystem space map
 to find areas that are allocated to file data fork extents.
-Gaps betweeen data fork extents that are smaller than 64k are treated as if
+Gaps between data fork extents that are smaller than 64k are treated as if
 they were data fork extents to reduce the command setup overhead.
 When the space map scan accumulates a region larger than 32MB, a media
 verification request is sent to the disk as a directio read of the raw block

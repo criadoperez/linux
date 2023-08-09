@@ -507,9 +507,9 @@ pressure if the memory is clean. Please note that the printed value might
 be lower than the real value due to optimizations used in the current
 implementation. If this is not desirable please file a bug report.
 
-"AnonHugePages" shows the ammount of memory backed by transparent hugepage.
+"AnonHugePages" shows the amount of memory backed by transparent hugepage.
 
-"ShmemPmdMapped" shows the ammount of shared (shmem/tmpfs) memory backed by
+"ShmemPmdMapped" shows the amount of shared (shmem/tmpfs) memory backed by
 huge pages.
 
 "Shared_Hugetlb" and "Private_Hugetlb" show the ammounts of memory backed by

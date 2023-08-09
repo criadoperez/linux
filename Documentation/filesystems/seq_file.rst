@@ -130,7 +130,7 @@ called SEQ_START_TOKEN; it can be used if you wish to instruct your
 show() function (described below) to print a header at the top of the
 output. SEQ_START_TOKEN should only be used if the offset is zero,
 however.  SEQ_START_TOKEN has no special meaning to the core seq_file
-code.  It is provided as a convenience for a start() funciton to
+code.  It is provided as a convenience for a start() function to
 communicate with the next() and show() functions.
 
 The next function to implement is called, amazingly, next(); its job is to
